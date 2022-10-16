@@ -1,15 +1,27 @@
-const colbalt = {
+const map = L.map('map').setView([-5.0000, 25.0000], 7);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+}).addTo(map);
+
+const cobalt = {
+
 	atomicNumber: 27,
-    properties: ["Hard", "Lustrous", "solid"],
-    color: "Silver-gray",
-    material: "Metal",
-    pigment: "Colbalt Blue",
-    previousNames: ["Metal Bismuth", "Kobold ore"],
     symbol: "Co",
+    previousNames: ["Metal Bismuth", "Kobold ore"],
+    isToxic: false,
+    color: "Silver-gray",
+    properties: ["Hard", "Lustrous", "solid"],
+    material: "Metal",
+    metal: "any of various opaque, fusible, ductile, and typically lustrous substances that are good conductors of electricity and heat, form cations by loss of electrons, and yield basic oxides and hydroxides especially : one that is a chemical element as distinguished from an alloy.",
+    pigment: "#0047AB",
+
+
     atomicMass: "58.933195",
     electronConfig: "[Ar] 3d⁷4s²",
     electronegativity: "1.88",
     vanDerWaalsRadius: "200",
+
     minesPollute: ["Water", "Air", "Soil", "Crops"],
     childEmployment: 40000,
     replacementForNaturalGas: true,
@@ -43,7 +55,7 @@ const colbalt = {
 	},
 
     isotope: {
-        name: "Colbalt-59",
+        name: "Cobalt-59",
         occurance: "Natural",
         type: "Stable isotope",
         meltingPoint: "1495",
@@ -79,7 +91,8 @@ const colbalt = {
                     tools: "Adequate",
                     abusiveSuperior: false,
                     hours: "Long",
-                    tunnels: "Safe"
+                    tunnels: "Safe",
+                    healthIssues: false
                 }
              }
         }
@@ -92,7 +105,8 @@ const colbalt = {
                     tools: "Inadequate",
                     abusiveSuperior: true,
                     hours: "Very long",
-                    tunnels: "Unsafe"
+                    tunnels: "Unsafe",
+                    healthIssues: true
                 }
             }
         }
