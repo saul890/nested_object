@@ -1,7 +1,8 @@
 #map{
-    height: 800px;
-    width: 800px;
-    margin: 5rem auto;
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    margin: 10rem 50rem;
 }
 
 #circle{
@@ -9,4 +10,16 @@
     height: 50px;
     width: 50px;
     background-color: black;
+}
+
+.leaflet-popup-content{
+    font-weight: bold;
+}
+
+#text{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: 100px;
+    color: white;
 }

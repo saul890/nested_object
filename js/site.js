@@ -1,4 +1,4 @@
-const map = L.map('map').setView([-5.0000, 25.0000], 7);
+const map = L.map('map').setView([-5.0000, 25.0000], 2);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -37,6 +37,7 @@ const cobalt = {
     producerInformation: {
         worldProductionAverage: 140000,
         largestMines: "DR Congo",
+        drAmount: "Produces 70% of all Cobolt",
         highestProducer: "DR Congo",
         highProducers: ["New Calidonia", "China", "Australia", "Phillphilippines", "Russia", "Cuba", "Canida"],
         lowerProducers: ["Papa New Guinea", "Madigascar", "Morocco", "Zambia", "Finland", "South Africa", "USA"],
@@ -112,3 +113,27 @@ const cobalt = {
         }
         }
         };
+        
+
+
+
+
+    L.marker([35.8617, 104.1954]).addTo(map)
+    .bindPopup(cobalt.consumerInformation.highestConsumer)
+    .openPopup();
+
+    L.marker([54.5260, 15.2551]).addTo(map)
+    .bindPopup(cobalt.consumerInformation.secondHighestConsumer)
+    .openPopup();
+
+    L.marker([37.0902, -95.7129]).addTo(map)
+    .bindPopup(cobalt.consumerInformation.thirdHighestConsumer)
+    .openPopup();
+
+    L.marker([-3.0383, 21.7587]).addTo(map)
+    .bindPopup(cobalt.producerInformation.highestProducer)
+    .openPopup();
+
+    document.getElementById("text").innerHTML+= cobalt.atomicNumber + cobalt.symbol + cobalt.previousNames[0] + cobalt.previousNames[1] + cobalt.color + cobalt.properties[0] + cobalt.properties[1] + cobalt.properties[2] + cobalt.material + cobalt.metal
+
+    document.querySelector("body").style.backgroundColor = "#0047AB"
